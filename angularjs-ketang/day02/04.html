@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>04</title>
+	<script src="js/jQuery/"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/ng04.js"></script>
+</head>
+<body>
+	<div ng-controller="EventController">
+		<h3 ng-bind="name"></h3>
+		<hr>
+		<button ng-click="show($event)">click me</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		
+		/* 设置slide宽度 */
+		.swiper-slide:nth-child(2n){ /* 0、2、4.... */
+			width: 60%;
+		}
+		.swiper-slide:nth-child(3n){ /* 0、3、6.... */
+			width: 40%;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第1页</div>
+			<div class="swiper-slide">第2页</div>
+			<div class="swiper-slide">第3页</div>
+			<div class="swiper-slide">第4页</div>
+			<div class="swiper-slide">第5页</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination", //分页
+			paginationClickable:true, //点击时切换
+
+			// direction:"vertical", //方向
+			spaceBetween:20, //滑块之间的距离
+
+			slidesPerView:3, //同时显示多个滑块
+			// slidesPerView:"auto", //自动根据slides的宽度来设定显示的数量
+
+			centeredSlides:true, //当前slide居中显示
+
+		});
+	</script>
+</body>
+</html>

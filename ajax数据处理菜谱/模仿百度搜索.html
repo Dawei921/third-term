@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/template.js"></script>
+	<script src="js/jquery-1.9.0.js"></script>
+	<script>
+		var tt = $("#search")
+		$.ajax{
+			type:"get",
+			url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+tt,
+			dataType:"jsonp",
+			success:function(data){
+				var result = template("date",data);
+				$("#info").html(result);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="search"><input type="button" value="查询">
+	<div id="info"></div>
+</body>
+</html>

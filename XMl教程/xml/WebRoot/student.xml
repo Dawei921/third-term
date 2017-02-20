@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- <!DOCTYPE student SYSTEM "student.dtd">  -->
+<!-- 自定义实体 -->
+<!DOCTYPE students [ 
+	<!ENTITY java "Java软件开发" >
+	<!ENTITY china "中华人民共和国" >
+]>
+
+<!-- 使用XML存储学生信息 -->
+<!-- 根元素有且只有一个 -->
+<!-- XML文件大小写敏感 -->
+<students>
+	<student id="1001">
+		<name>tom</name>
+		<age>21</age>
+		<sex><!-- 学生的性别 --></sex>
+		<!-- <address></address> -->
+		<!-- <address value="江苏南京"/> -->
+		<!-- <address province="江苏省" city="南京市" district="秦淮区"/> -->
+		<address>
+			<province>江苏省</province>
+			<province>山东省</province>
+		</address>
+		<info city="上海"/>
+		<book>&lt;&lt;小红帽的故事&gt;&gt;</book>
+		<major>&java;</major>
+		<country>&china;</country>
+		<country>&amp;china;</country>
+		<book>
+			<![CDATA[ 
+				<<小红帽的故事>>
+				&gt;
+			]]>  
+		</book>
+	</student>
+	<student>
+		<name>jack</name>
+	</student>
+</students>

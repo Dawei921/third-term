@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container swiper-container-h">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第1页</div>
+			<div class="swiper-slide">
+				<div class="swiper-container swiper-container-v">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">vertical_第1页</div>
+						<div class="swiper-slide">vertical_第2页</div>
+						<div class="swiper-slide">vertical_第3页</div>
+						<div class="swiper-slide">vertical_第4页</div>
+						<div class="swiper-slide">vertical_第5页</div>
+						<div class="swiper-slide">vertical_第6页</div>
+						<div class="swiper-slide">vertical_第7页</div>
+						<div class="swiper-slide">vertical_第8页</div>
+						<div class="swiper-slide">vertical_第9页</div>
+						<div class="swiper-slide">vertical_第10页</div>
+					</div>
+					<div class="swiper-pagination swiper-pagination-v"></div>
+				</div>
+			</div>
+			<div class="swiper-slide">第3页</div>
+			<div class="swiper-slide">第4页</div>
+			<div class="swiper-slide">第5页</div>
+			<div class="swiper-slide">第6页</div>
+			<div class="swiper-slide">第7页</div>
+			<div class="swiper-slide">第8页</div>
+			<div class="swiper-slide">第9页</div>
+			<div class="swiper-slide">第10页</div>
+		</div>
+		<div class="swiper-pagination swiper-pagination-h"></div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container-h",{
+			pagination:".swiper-pagination-h",
+			paginationClickable:true,
+			spaceBetween:20,
+
+			grabCursor:true, //抓手光标
+
+		});
+
+		var swiper=new Swiper(".swiper-container-v",{
+			pagination:".swiper-pagination-v",
+			paginationClickable:true,
+			spaceBetween:20,
+			direction:"vertical",
+
+
+		});
+	</script>
+</body>
+</html>

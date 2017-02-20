@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>表单</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+      hr{
+        border: 1px solid #666;
+      }
+    </style>
+  </head>
+  <body style="margin:30px">
+    <!-- 表单基本实例 -->
+    <form>
+      <div class="form-group">
+        <label for="email">电子邮件</label>
+        <input type="email" id="email" class="form-control" placeholder="请输入电子邮件">
+      </div>
+      <div class="form-group">
+        <label for="pwd">密码</label>
+        <input type="password" id="pwd" class="form-control" placeholder="请输入密码">
+      </div>
+    </form>
+    <hr> 
+
+    <!-- 内联表单 -->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="email" class="sr-only">电子邮件</label>
+        <input type="email" id="email" class="form-control" placeholder="请输入电子邮件">
+      </div>
+      <div class="form-group">
+        <label for="pwd">密码</label>
+        <input type="password" id="pwd" class="form-control" placeholder="请输入密码">
+      </div>
+      <!-- 输入框组(组件) -->
+      <div class="form-group">
+        <label for="money">金额</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" id="money" class="form-control" placeholder="请输入金额">
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">电子邮件</label>
+        <div class="input-group">
+          <div class="input-group-addon">@</div>
+          <input type="email" id="email" class="form-control" placeholder="请输入电子邮件">
+        </div>
+      </div>
+      <br>
+      <!-- 尺寸 -->
+      <div class="form-group">
+        <label for="email">电子邮件</label>
+        <div class="input-group input-group-lg">
+          <div class="input-group-addon">@</div>
+          <input type="email" id="email" class="form-control" placeholder="请输入电子邮件">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">电子邮件</label>
+        <div class="input-group input-group-sm">
+          <div class="input-group-addon">@</div>
+          <input type="email" id="email" class="form-control" placeholder="请输入电子邮件">
+        </div>
+      </div>
+      <!-- 作为额外元素的多选框和单选框 -->
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox">
+        </span>
+        <input type="text" class="form-control">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="radio">
+        </span>
+        <input type="text" class="form-control">
+      </div>
+      <!-- 作为额外元素的按钮 -->
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-success">GO</button>
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </form>
+    <hr>
+    
+    <!-- 水平排列的表单 -->
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="money" class="col-sm-2 col-sm-offset-2 control-label">金额</label>
+        <div class="input-group col-sm-6">
+          <div class="input-group-addon">$</div>
+          <input type="text" id="money" class="form-control" placeholder="请输入金额">
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 col-sm-offset-2 control-label">电子邮件</label>
+        <div class="input-group col-sm-6">
+          <div class="input-group-addon">@</div>
+          <input type="email" id="email" class="form-control" placeholder="请输入电子邮件">
+        </div>
+      </div>
+    </form>
+    <hr>
+
+    <!-- 被支持的控件 -->
+    <form>
+      <textarea rows="10" class="form-control">
+        服务协议
+      </textarea>
+      <div class="radio">
+        <label>
+          <input type="radio" name="sex" checked>男
+        </label>
+        <label>
+          <input type="radio" name="sex" checked>女
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="hobby" checked>吃饭
+        </label>
+        <label>
+          <input type="checkbox" name="hobby" checked>睡觉
+        </label>
+      </div>
+      <select class="form-control">
+        <option value="">大专</option>
+        <option value="">本科</option>
+        <option value="">研究生</option>
+      </select>
+    </form>
+
+
+
+
+
+
+
+
+  </body>
+</html>

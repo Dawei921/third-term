@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>06</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/ng06.js"></script>
+</head>
+<body>
+	<div ng-controller="EventController">
+		<button ng-click="doAdd()">按钮1</button>
+		count1={{count}}
+		<hr>
+		<div ng-controller="EventController">
+			<button ng-click="doAdd()">按钮2</button>
+			count2={{count}}
+			<button ng-click="$emit('MyClick')">上行emit</button>
+			<button ng-click="$broadcast('MyClick')">下行broadcast</button>
+			<hr>
+			<div ng-controller="EventController">
+				<button ng-click="doAdd()">按钮3</button>
+				count3={{count}}
+				<hr>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

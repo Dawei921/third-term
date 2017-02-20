@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		body{
+			margin:0;
+			padding:0;
+		}
+		.swiper-container{
+			width: 500px;
+			height: 300px;
+			margin:20px auto;
+			border:1px solid red;
+			overflow: hidden;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第1页</div>
+			<div class="swiper-slide">第2页</div>
+			<div class="swiper-slide">第3页</div>
+			<div class="swiper-slide">第4页</div>
+			<div class="swiper-slide">第5页</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var mySwiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			paginationClickable:true,
+
+			onInit:function(swiper){
+				console.log("Swiper初始化了");
+				/*for(var index in swiper){
+					console.log(index+"="+swiper[index]);
+				}*/
+			},
+			onClick:function(swiper,event){
+				console.log("点击Slide");
+			},
+			onTap:function(swiper,event){
+				console.log("触碰Slide");
+			},
+			onDoubleTap:function(swiper,event){
+				console.log("两次触碰Slide，类似于双击");
+			},
+			onSliderMove:function(swiper,event){
+				console.log("Slide移动了");
+			},
+			onSlideChangeStart:function(swiper,event){
+				console.log("Slide切换开始");
+			},
+			onSlideChangeEnd:function(swiper,event){
+				console.log("Slide切换结束");
+			},
+			onTransitionStart:function(swiper,event){
+				console.log("过渡开始");
+			},
+			onTransitionEnd:function(swiper,event){
+				console.log("过渡结束");
+			},
+			onReachBeginning:function(swiper,event){
+				console.log("切换到第一个Slide了");
+			},
+			onReachEnd:function(swiper,event){
+				console.log("切换到最后一个Slide了");
+			},
+
+
+
+
+		});
+	</script>
+</body>
+</html>

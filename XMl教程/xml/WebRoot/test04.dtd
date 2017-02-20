@@ -1,0 +1,7 @@
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (city,district,street)>
+	<!ELEMENT city (#PCDATA)>
+	<!ELEMENT district (#PCDATA)>
+	<!ELEMENT street (#PCDATA)>
+<!ELEMENT phone EMPTY >	

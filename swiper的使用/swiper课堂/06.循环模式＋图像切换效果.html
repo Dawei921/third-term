@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 500px;
+			height: 300px;
+			margin:20px auto;
+		}
+		.swiper-slide{
+			background-size: cover;
+			background-position: center;
+		}
+		
+	</style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(images/6.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(images/7.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(images/8.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(images/4.jpg)"></div>
+        </div>
+        <!--左右按钮以及颜色部分-->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+
+    <script src="js/swiper.min.js"></script>
+    <script>
+    //配置
+    	var swiper = new Swiper(".swiper-container",{
+    		pagination:".swiper-pagination",//下面的页码
+    		scrollbarHide:false,//滚动条
+    		paginationClickable:true,//点击下面的按钮可以跳转
+    		spaceBetween:20,//间距
+    		prevButton:".swiper-button-prev",
+    		nextButton:".swiper-button-next",
+
+    		loop:true,//循环模式
+    		// effect:"fade",//切换模式 隐藏
+            /*effect:"cube", //方块模式
+            cube:{
+                slideShadows:false,//开启slide阴影
+                shadow:false,//开启投影
+            }*/
+           /* effect:"coverflow",//影院效果
+            slidesPerView:3,*/
+            effect:"flip",   //翻转
+    	})
+    </script>
+</body>
+
+</html>

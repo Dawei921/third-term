@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+			margin:0 auto;
+		}
+		.swiper-slide{
+			background-size: cover;
+			background-position: center;
+		}
+
+		.gallery-top{
+			width:100%;
+			height: 80%;
+		}
+		.gallery-thumbs{
+			width: 100%;
+			height: 20%;
+			padding:10px 0;
+			box-sizing: border-box;
+		}
+		.gallery-thumbs .swiper-slide{
+			width: 25%;
+			height:100%;
+			opacity: 0.4;
+		}
+		.gallery-thumbs .swiper-slide-active{
+			opacity: 1;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="swiper-container gallery-top">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image:url(images/ad-01.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-02.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-03.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-04.jpg)"></div>
+		</div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+	</div>
+	<div class="swiper-container gallery-thumbs">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image:url(images/ad-01.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-02.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-03.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-04.jpg)"></div>
+		</div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiperTop=new Swiper(".gallery-top",{
+			spaceBetween:20,
+			prevButton:".swiper-button-prev",
+			nextButton:".swiper-button-next",
+			loop:true,
+			loopedSlides:4,
+		});
+
+		var swiperThumbs=new Swiper(".gallery-thumbs",{
+			spaceBetween:20,
+			slidesPerView:"auto",
+			centeredSlides:true,
+			slideToClickedSlide:true, //滑动到当前点击的滑块
+			loop:true,
+			loopedSlides:4,
+		});
+
+		swiperTop.params.control=swiperThumbs; //设置swiperTop控制swiperThumbs
+		swiperThumbs.params.control=swiperTop; //设置swiperThumbs控制swiperTop
+		
+
+
+
+
+
+	</script>
+</body>
+</html>

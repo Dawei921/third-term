@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-href&ng-readonly</title>
+	<script src="../angular-1.5.8/angular.min.js"></script>
+	<script src="js/04.js"></script>
+</head>
+<body ng-controller="FilterController">
+	<h3>
+		<a ng-href="{{abs}}">baidu</a>
+	</h3>
+	<h3>
+		<img ng-src="{{pic}}" alt="">
+		<!-- <img src="2.jpg" height="480" width="800" alt=""> -->
+	</h3>
+	<h3>
+		<input type="text" ng-readonly="readonly">
+		<button ng-click="show()">readonly</button>
+	</h3>
+</body>
+</html>

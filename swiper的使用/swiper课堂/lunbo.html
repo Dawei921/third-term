@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<title>fangye</title>
+	<style>
+		html,body{
+			position:relative;
+			height:100%;
+		}
+		body{
+			margin:0;
+			padding:0;
+		}
+
+		.swiper-container{
+			width:500px;
+			height:300px;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="img/1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="img/2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="img/3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="img/4.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="img/5.jpg" alt=""></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",//分页
+			paginationClickable:true,//点击时切换
+
+			//direction:"vertical",//垂直方向
+			spaceBetween:0,//滑块的之间的距离
+			// slidesPerView:3,//同时显示多个滑块
+			//slidesPerView:"auto",//自动根据slides的宽度来设定显示的数量
+			// centeredSlides:true,//当前slide居中显示
+		});
+	</script>
+</body>
+</html>

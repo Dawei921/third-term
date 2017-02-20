@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.css">
+	<style>
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-slide{
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+		/* 视差效果 */
+		.parallax-bg{
+			background-image: url(images/ad-01.jpg);
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 130%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+		}
+		
+		/* 自定义导航圆点样式 */
+		.swiper-pagination-bullet{
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			font-size: 12px;
+			color: #000;
+			background-color: #999;
+			opacity: 1;
+		}
+
+		.swiper-pagination-bullet-active{
+			color:#fff;
+			background-color: #07f;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<!-- 
+			data-swiper-parallax属性用来设置移动的距离，可以指定数值或百分比
+			负数表示向左，正数表示向右
+
+			data-swiper-parallax接受两种类型的参数。
+		    1.number（单位：px），移动距离=number*progress。
+		    2.percentage（百分比），移动距离=元素宽度*percentage*progress。  130%*23%*0.25=7.475%
+		 -->
+		<!-- <div class="parallax-bg" data-swiper-parallax="1000"></div> --> <!-- 向右移动1000*1/4=250px -->
+		<!-- <div class="parallax-bg" data-swiper-parallax="-1000"></div> --> <!-- 向左移动1000*1/4=250px -->
+		<div class="parallax-bg" data-swiper-parallax="-23%"></div>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div data-swiper-parallax="-100">第1页</div>
+			</div>
+			<div class="swiper-slide">
+				<div data-swiper-parallax="-100">第1页</div>
+			</div>
+			<div class="swiper-slide">
+				<div data-swiper-parallax="-100">第1页</div>
+			</div>
+			<div class="swiper-slide">
+				<div data-swiper-parallax="-100">第1页</div>
+			</div>
+			<div class="swiper-slide">
+				<div data-swiper-parallax="-100">第1页</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+	</div>
+	
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/swiper.jquery.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			paginationClickable:true,
+			spaceBetween:20,
+			prevButton:".swiper-button-prev",
+			nextButton:".swiper-button-next",
+
+			//视差效果
+			parallax:true, //开启视差效果
+
+
+			// paginationType:"fraction", //分式导航
+
+			// paginationType:"progress", //进度条导航
+
+			//自定义导航
+			paginationBulletRender:function(swiper,index,className){
+				return "<span class='"+className+"'>"+(index+1)+"</span>";
+			},
+
+
+		});
+
+		$(function(){
+			console.log(111);
+		});
+	</script>
+</body>
+</html>

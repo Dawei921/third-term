@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 500px;
+			height: 300px;
+			margin:20px auto;
+		}
+		.swiper-slide{
+			background-size: cover;
+			background-position: center;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image:url(images/ad-01.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-02.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-03.jpg)"></div>
+			<div class="swiper-slide" style="background-image:url(images/ad-04.jpg)"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			scrollbarHide:false,
+			paginationClickable:true,
+			spaceBetween:20,
+			prevButton:".swiper-button-prev",
+			nextButton:".swiper-button-next",
+
+			loop:true, //循环模式
+
+			// effect:"fade",
+
+			/*effect:"cube",
+			cube:{
+				slideShadows:false, //开启slide阴影
+				shadow:false, //开启投影
+			},*/
+
+			/*effect:"coverflow",
+			slidesPerView:3,*/
+
+			effect:"flip",
+
+
+
+		});
+	</script>
+</body>
+</html>

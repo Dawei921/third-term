@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/ng01.js"></script>
+</head>
+<body>
+	<div ng-controller="FirstController">
+		<h3 ng-bind="name"></h3>
+		<h3 ng-bind="age"></h3>
+		<br>
+		<div ng-controller="SecondController">
+			<h3 ng-bind="name"></h3>
+			<h3 ng-bind="age"></h3>
+			<h3>{{$parent.age}}</h3>
+		</div>
+	</div>
+
+	<hr>
+	<div ng-controller="SecondController">
+		<h3 ng-bind="name"></h3>
+	</div>
+</body>
+</html>

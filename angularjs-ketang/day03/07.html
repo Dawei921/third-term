@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+	<script src='js/ng07.js'></script>
+</head>
+<body ng-controller="DirectiveController">
+	<li ng-repeat="(a,b) in users track by a">{{b}}</li>
+
+	<table>
+		<thead>
+			<th>
+				<td>编号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>爱好</td>
+				<td>密码</td>
+			</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="index in users">
+				<!-- <td>{{index.id}}</td>
+				<td>{{index.name}}</td>
+				<td>{{index.age}}</td>
+				<td>{{index.pwd}}</td>
+				<td>{{index.hobby}}</td> -->
+				<td ng-repeat="a in index">{{a}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+	<hr>
+	<hr>
+	<ul>
+		<li ng-repeat="u in users|filter:{name:'a'}">{{u.name}}</li>
+	</ul>
+	<hr>
+	<ul>
+		<li ng-repeat="(v,u) in arr|filter:'a' track by v">{{u}}</li>
+	</ul>
+	<h3>获取遍历的状态信息</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>k</th>
+				<th>v</th>
+				<th>$index</th>
+				<th>$first</th>
+				<th>$middle</th>
+				<th>$last</th>
+				<th>$even</th>
+				<th>$odd</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="(k,v) in arr track by k">
+				<td>{{k}}</td>
+				<td>{{v}}</td>
+				<td>{{$index}}</td>
+				<td>{{$first}}</td>
+				<td>{{$middle}}</td>
+				<td>{{$last}}</td>
+				<td>{{$even}}</td>
+				<td>{{$odd}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+
+	<select ng-model="s1" ng-options=" v for (k,v) in arr" >
+		<option value>请选择</option>
+	</select>
+	<h1>{{s1}}</h1>
+
+	<select ng-model="s2" ng-options="k as v for (k,v) in arr">
+		<option value>choose</option>
+	</select>
+	<h2>{{s2}}</h2>
+
+<select ng-model="s3" ng-options="v.hobby8 as v.name for (k,v) in users">
+		<option value>choose</option>
+	</select>
+	<h2>{{s3}}</h2>
+
+
+
+
+
+</body>
+</html>

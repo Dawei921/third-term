@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>内置过滤器</title>
+	<script src="../angular-1.5.8/angular.min.js"></script>
+	<script src="js/ng02.js"></script>
+</head>
+<body>
+	<div ng-controller="FilterController">
+		{now} <br>
+		{{now|date:'yyyy-MM-dd HH:mm:ss Z'}}
+		<h3 ng-bind="str"></h3>
+		<h5 ng-bind="person"></h5>
+		{{'abcdefghigklmnopqrstuvwxyz'|limitTo:2}} <br>
+		{{'abcdefghigklmnopqrstuvwxyz'|limitTo:-2}} <br>
+		{{'abcdefghigklmnopqrstuvwxyz'|limitTo:4:2}} <br>
+	</div>
+</body>
+</html>

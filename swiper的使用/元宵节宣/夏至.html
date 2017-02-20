@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/swiper.animate-twice.min.js"></script>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        height: 100%;
+        position: relative;
+    }
+    
+   
+    .swiper-slide .img02-1 {
+        position: absolute;
+        left: 57%;
+        top: 7%;
+        width: 43%;
+    }
+    
+    .swiper-slide .img02-2 {
+        position: absolute;
+        left: 2%;
+        top: 36%;
+        width: 54%;
+    }
+    
+    .swiper-slide .img03-2 {
+        position: absolute;
+        right: 23%;
+        top: 56%;
+        width: 45%;
+    }
+    
+    .swiper-slide .img03-1 {
+        position: absolute;
+        left: 4%;
+        top: 9%;
+        width: 55%;
+    }
+    
+    .swiper-slide .img04-2 {
+        position: absolute;
+        right: 13%;
+        top: 40%;
+        width: 49%;
+    }
+    
+    .swiper-slide .img04-1 {
+        position: absolute;
+        left: 4%;
+        top: 9%;
+        width: 55%;
+    }
+    
+    .swiper-slide .img05-1 {
+        position: absolute;
+        right: 6%;
+        top: 6%;
+        width: 44%;
+    }
+    
+    .swiper-slide .img05-2 {
+        position: absolute;
+        left: 4%;
+        top: 50%;
+        width: 52%;
+    }
+    
+    .swiper-slide .img06-1 {
+        position: absolute;
+        left: 27%;
+        top: 9%;
+        width: 52%;
+    }
+    
+    .swiper-slide .img06-2 {
+        position: absolute;
+        left: 27%;
+        top: 47%;
+        width: 52%;
+    }
+    
+    .swiper-slide .school {
+        position: absolute;
+        left: 26%;
+        top: 57%;
+        width: 49%;
+    }
+    
+    .swiper-container .music_off {
+        position: absolute;
+        width: 14%;
+        top: 4%;
+        right: 6%;
+        z-index: 998;
+        animation: one 3s infinite linear;
+    }
+    
+    .swiper-container .music {
+        position: absolute;
+      
+        z-index: 999;
+        right: 0%;
+        top: 0%;
+        width: 100%;
+    }
+    
+    @keyframes one {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .img01{
+    	width:100%;
+    }
+     .jiantou{
+    	position: absolute;
+    	bottom:0%;
+    	
+    	left:42%;
+    	width:16%;
+
+    	animation: three 2s infinite linear;
+    }
+    @keyframes three {
+    	0%{
+    		bottom:3px;
+    		opacity:1;
+    	}
+    	50%{
+    		bottom:20px;
+    		opacity: 0.1;
+    	}
+    	100%{
+    		bottom:3px;
+    		opacity:1;
+    	}
+    }
+    #begin1{
+        background-image: none;
+    }
+    #begin1 img{
+        display: inline-block;
+
+    }
+    .swiper-slide .img-00-1{
+        position: absolute;
+		width:320px;
+        height:200px;
+		
+		top:40%;
+		margin-left:45%;
+        left:-143px;
+        overflow: hidden;
+		/*z-index: 999;*/
+    }
+    .swiper-slide .img-00-2{
+        position: absolute;
+    	width:320px;
+        height:200px;
+		
+		top:40%;
+        margin-left:45%;
+		left:-143px;
+		/*z-index: 998;*/
+		overflow: hidden;
+		animation: two 2.5s linear;
+    }
+    @keyframes two{
+    	0%{
+    	
+    		width:0px;
+    	}
+    	25%{
+            width:100px;
+        }
+    	75%{
+            width:150px ;
+        }
+    	100%{
+    		
+    		/*transform: scale(1,1);*/
+    		width:320px;
+    	}
+    
+    }
+    .music{
+    	/*position: absolute;*/
+    	opacity:0;
+    }
+   
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <img src="img/music.gif" class="music ">
+        <img src="img/music_off.png" class="music_off ">
+        <audio controls="preload" src="img/bgmusic.mp3"  id="audio" class="music" >
+        	
+        </audio>
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="begin1">
+
+                <div class="img-00-1"><img src="img/00-1.png" ></div>
+                <div class="img-00-2"><img src="img/00-2.png" ></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/01.jpg" alt="" class="img01">
+                <img src="img/arrow.png" class="jiantou">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/bg.png" class="img01">
+                <img src="img/arrow.png" class="jiantou">
+                <img src="img/02-1.png" class="img02-1 ani" data-slide-in="at 1000 from slideInRight use swing during 1000">
+                <img src="img/02-2.png" class="img02-2 ani" data-slide-in="at 500 from fadein use swing during 500" data-slide-out="at 0 to fadeInLeft use swing during 1500 force">
+
+            </div>
+            <div class="swiper-slide">
+                <img src="img/bg.png" alt="" class="img01">
+                <img src="img/arrow.png" class="jiantou">
+                <img src="img/03-2.png" class="img03-2 ani" data-slide-in="at 1000 from bounceInRight use swing during 1000">
+                <img src="img/03-1.png" class="img03-1 ani" data-slide-in="at 500 from fadein use swing during 500" data-slide-out="at 0 to fadeInLeft use swing during 1500 force">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/bg.png" alt="" class="img01">
+                <img src="img/arrow.png" class="jiantou">
+                <img src="img/04-2.png" class="img04-2 ani" data-slide-in="at 500 from fadein use swing during 500" data-slide-out="at 0 to fadeInRight use swing during 1500 force">
+                <img src="img/04-1.png" class="img04-1 ani" data-slide-in="at 1000 from bounceInLeft use swing during 1000">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/bg.png" alt="" class="img01">
+                <img src="img/arrow.png" class="jiantou">
+                <img src="img/05-1.png" class="img05-1 ani" data-slide-in="at 500 from fadein use swing during 500" data-slide-out="at 0 to fadeInRight use swing during 1500 force">
+                <img src="img/05-2.png" class="img05-2 ani" data-slide-in="at 1000 from bounceInLeft use swing during 1000">
+            </div>
+            <div class="swiper-slide ">
+                <img src="img/bg.png" alt="" class="img01">
+                <img src="img/arrow.png" class="jiantou">
+                <img src="img/06-1.png" class="img06-1">
+                <img src="img/06-2.png" class="img06-2 ani" data-slide-in="at 0 from rubberBand use swing during 1500">
+                <img src="img/school.png" class="school ani" data-slide-in="at 0 from pulse use swing during 2000">
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+    <script>
+    var myAuto = document.getElementById('audio');  
+          myAuto.play(); 
+    var mySwiper = new Swiper(".swiper-container", {
+        // pagination: ".swiper-pagination",
+        direction: "vertical",
+        onInit: function(swiper) {
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd: function(swiper) {
+            swiperAnimate(swiper);
+        }
+    });
+    $(function(){
+    	
+    	setTimeout( function(){
+    		begin();
+    	},2500);
+    });
+    function begin(){
+    	$("#begin1").remove();
+    	mySwiper.updateSlidesSize();//更新swiper
+		mySwiper.updatePagination();
+    }
+    </script>
+</body>
+
+</html>

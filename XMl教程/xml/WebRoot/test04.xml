@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 定义内部DTD规则 -->
+<!-- <!DOCTYPE itany [
+	<!ELEMENT itany (name,address) >
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT address (#PCDATA)>
+]> -->
+
+<!-- 引入外部的DTD规则文件 -->
+<!DOCTYPE itany SYSTEM "test04.dtd" [
+	<!ELEMENT itany (name,address,phone,content) >
+	<!ELEMENT content (#PCDATA)>
+]>
+
+<itany>
+	<name>南京网博</name>
+	<address>
+		<city>南京市</city>
+		<district>秦淮区</district>
+		<street>龙蟠中路</street>
+	</address>
+	<phone/>
+	<content>棒棒哒</content>
+</itany>

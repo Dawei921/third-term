@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../angular-1.5.8/angular.min.js"></script>
+	<script src="js/ng03.js"></script>
+</head>
+<body ng-controller="FilterController">
+	<h3>{{users|orderBy:'name'}}</h3>
+	<h3>{{users|orderBy:'age'}}</h3>
+	<h3>{{users|orderBy:'age':true}}</h3>
+	<br>
+	<h3>{{users|orderBy:comp3:false}}</h3>
+	<br>
+	<h3>{{users|orderBy:'name':false:comp4}}</h3>
+</body>
+</html>

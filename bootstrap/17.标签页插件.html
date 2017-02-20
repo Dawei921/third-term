@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+    hr {
+        border: 1px solid #666;
+    }
+    </style> 
+</head>
+
+<body style="margin:50px;">
+    <!-- 标签页，也就是选项卡 -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#bootstrap">BootStrap</a></li>
+        <li><a href="#html5">HTML5</a></li>
+        <li><a href="#css3">CSS3</a></li>
+        <li><a href="#angular">Angular</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active fade in" id="bootstrap">
+            BootStrap.....
+        </div>
+        <div class="tab-pane" id="html5">
+            HTML5.....
+        </div>
+        <div class="tab-pane" id="css3">
+            CSS3.....
+        </div>
+        <div class="tab-pane" id="angular">
+            Angular.....
+        </div>
+    </div>
+    <script>
+    $('.nav a').on('click',function () {
+         $(this).tab('show');
+    }).on('show.bs.tab',function(){
+        console.log('即将显示选项。。。。');
+    });
+
+    </script>
+
+
+<!-- 方法二 -->
+<!-- 第二种方法  通过添加data-toggle="tab" 从而不用写js -->
+    <ul class="nav nav-tabs" >
+    <li class="active"><a href="#home"  data-toggle="tab">Home</a></li>
+    <li><a href="#profile" data-toggle="tab">Profile</a></li>
+    <li><a href="#messages" data-toggle="tab">Messages</a></li>
+    <li><a href="#settings"  data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="home">home</div>
+    <div class="tab-pane" id="profile">2</div>
+    <div class="tab-pane" id="messages">3</div>
+    <div class="tab-pane" id="settings">...</div>
+  </div>
+    
+</div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<script src="js/swiper.min.js"></script>
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.swiper-slide{
+			width: 100%;
+			position: relative;
+		}
+		.swiper-slide img{
+			display: block;
+			width: 100%;
+		}
+		.swiper-slide .plane{
+			position: absolute;
+			top:30px;
+			right: 30px;
+			width: 30%;
+		}
+		.swiper-slide .sun{
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 30%;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/plane.png" class="ani plane" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.1s">
+				<img src="images/01.jpg">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/sun.png" class="ani sun" swiper-animate-effect="rotateIn" swiper-animate-duration="3s" swiper-animate-delay="0.1s">
+				<img src="images/02.jpg">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+			var mySwiper=new Swiper(".swiper-container",{
+				pagination:".swiper-pagination",
+				onInit:function(swiper){
+					swiperAnimateCache(swiper);
+					swiperAnimate(swiper);
+				},
+				onSlideChangeEnd:function(swiper){
+					swiperAnimate(swiper);
+				},
+
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>filter</title>
+	<script src="../angular-1.5.8/angular.min.js"></script>
+	<script src="js/05.js"></script>
+</head>
+<body ng-controller="FilterControler">
+	<h3>{{"Hello" | reverse}}</h3>
+	<h3>{{"Hello World" | reverse}}</h3>
+	<!-- <h3>{{str}}</h3> -->
+	<hr>
+
+	<h3>{{"Hello World" | reverse:' '}}</h3>
+	<h3>{{"tom,jack,mike,alice" | reverse:','}}</h3>
+	<hr>
+	<h3>{{12345.678|reverse}}</h3>
+	<h3>{{[13,2,43,23,8] | reverse}}</h3>
+	<h3>{{hobbies | reverse}}</h3>
+	<h3>{{true|reverse}}</h3>
+</body>
+</html>

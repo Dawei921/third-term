@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/form.js"></script>
+</head>
+<body ng-controller="FormController">
+	<form name="fm" ng-submit="doSubmit()" novalidate>
+		<p>
+			<label for="txtName"></label>
+			<input type="text" name="name" id="txtName" placeholder="请输入用户名" ng-model="user.name" required>
+			<span ng-show="fm.name.$pristine">用户姓名</span>    <!-- 一开始为空的时候提示 -->
+			<span ng-show="fm.name.$dirty&&fm.name.$valid">正确</span>
+			<span ng-show="fm.name.$dirty&&fm.name.$invalid">必填</span>
+		</p>
+		<p>
+			<label for="txtage"></label>
+			<input type="text" name="age" id="txtage" placeholder="请输入年龄" ng-model="user.age" required>
+			<span ng-show="fm.age.$pristine">用户年龄</span>
+			<span ng-show="fm.age.$dirty&&fm.age.$valid">正确</span>
+			<span ng-show="fm.age.$dirty&&fm.age.$invalid">必填</span>
+		</p>
+		<p>
+			<label for="txtEmail"></label>
+			<input type="email" id="txtEmail" name="email" placeholder="shuru youxiang" ng-model="user.email" required>
+			<span ng-show="fm.email.$pristine">用户邮箱</span>
+			<span ng-show="fm.email.$dirty&&fm.email.$valid" ng-style="{color:'green'}">正确</span>
+			<span ng-show="fm.email.$dirty&&fm.email.$invalid" ng-style="{color:'red'}">
+				<span ng-show="fm.email.$error.required">必填</span>
+				<span ng-show="fm.email.$error.email">格式不正确</span>
+			</span>
+		</p>
+		<p>
+			<input type="submit" value="tijiao" ng-disabled="fm.$invalid">
+			<input type="reset" value="reset">
+		</p>
+	</form>
+</body>
+</html>

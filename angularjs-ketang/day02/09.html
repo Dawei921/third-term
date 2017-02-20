@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>calctor</title>
+</head>
+<body>
+	<div ng-controller="CalcController">
+		<h3>请输入一个数：<input type="text" ng-model="num1"></h3>	
+		<h3>请输入第二个数：<input type="text" ng-model="num2"></h3>	
+		<h3><button value="加">加</button><button value="减">减</button> <button value="乘">乘</button> <button value="除">除</button></h3>
+		<h3>结果：<span ng-bind="result"></span></h3>
+	</div>
+
+</body>
+</html>

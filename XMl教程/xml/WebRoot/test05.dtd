@@ -1,0 +1,9 @@
+<!ELEMENT CCTV-6 (电影+,广告) >
+	<!ELEMENT 电影 (名称,主演+,类型*,片长) >
+		<!ELEMENT 名称 (#PCDATA)>
+		<!ELEMENT 主演 (#PCDATA)>
+		<!ELEMENT 类型 (#PCDATA)>
+		<!ELEMENT 片长 (#PCDATA)>
+	<!ELEMENT 广告 (商品?,时长)>
+		<!ELEMENT 商品 (#PCDATA)>	
+		<!ELEMENT 时长 (#PCDATA)>	

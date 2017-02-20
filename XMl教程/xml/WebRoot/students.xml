@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><students>
+
+	<student sn="02">
+		<name>李四</name>
+		<age>44</age>
+	</student>
+	<student sn="05">
+		<name>赵信</name>
+		<age>28</age>
+	</student>
+	<student sn="08">
+		<name>盖伦</name>
+		<age>26</age>
+	</student>
+	<student sn="09">
+		<name>tom</name>
+		<age>27</age>
+	</student>
+</students>

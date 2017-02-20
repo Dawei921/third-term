@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第1页</div>
+			<div class="swiper-slide">第2页</div>
+			<div class="swiper-slide">第3页</div>
+			<div class="swiper-slide">第4页</div>
+			<div class="swiper-slide">第5页</div>
+			<div class="swiper-slide">第6页</div>
+			<div class="swiper-slide">第7页</div>
+			<div class="swiper-slide">第8页</div>
+			<div class="swiper-slide">第9页</div>
+			<div class="swiper-slide">第10页</div>
+		</div>
+		<!-- 添加滚动条 -->
+		<div class="swiper-scrollbar"></div>
+		<!-- 添加左右控制按钮（箭头） -->
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			scrollbar:".swiper-scrollbar", //滚动条
+			scrollbarHide:false,
+			paginationClickable:true,
+			spaceBetween:20,
+
+			prevButton:".swiper-button-prev",
+			nextButton:".swiper-button-next",
+		});
+	</script>
+</body>
+</html>

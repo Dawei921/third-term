@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/form2.js"></script>
+</head>
+<body ng-controller="FormController" ng-cloak>
+	<form name="fm" ng-submit="doSubmit()" novalidate> <!-- 禁用浏览器验证 -->
+		<p ng-repeat="field in fields" ng-form="fm_input">  <!-- 表示表单嵌套表单 -->
+			<label for="{{field.id}}">{{field.name}}:</label>
+			<input type="{{field.type}}" id="{{field.id}}" name="{{field.name}}" placeholder="{{field.placeholder}}" ng-model="field.value" ng-required="filed.isReq">
+			<span ng-show="fm.{{field.name}}.$dirty&&fm.{{field.name}}.$valid" ng-style="{color:'green'}">正确</span>
+			<span ng-show="fm.{{field.name}}.$dirty&&fm.{{field.name}}.$invalid" ng-style="{color:'red'}">必填</span>
+		</p>
+		<p>
+			<input type="submit" value="提交" ng-disabled="fm.$invalid">
+			<input type="reset" value="重置">
+		</p>
+	</form>
+</body>
+</html>

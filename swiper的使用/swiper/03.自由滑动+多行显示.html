@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			/* height: 300px; */
+
+			margin: 20px auto;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			
+			height: 200px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第1页</div>
+			<div class="swiper-slide">第2页</div>
+			<div class="swiper-slide">第3页</div>
+			<div class="swiper-slide">第4页</div>
+			<div class="swiper-slide">第5页</div>
+			<div class="swiper-slide">第6页</div>
+			<div class="swiper-slide">第7页</div>
+			<div class="swiper-slide">第8页</div>
+			<div class="swiper-slide">第9页</div>
+			<div class="swiper-slide">第10页</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			paginationClickable:true,
+			spaceBetween:20,
+			slidesPerView:2,
+			
+			freeMode:true, //自由滑动内容
+			slidesPerColumn:3, //同时显示的行数
+
+
+		});
+	</script>
+</body>
+</html>

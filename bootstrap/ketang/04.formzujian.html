@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>排版样式</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<form >
+			<div class="form-group">
+				<label for="email">email</label>
+				<input type="email" id="email" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="pwd" >pwd</label>
+				<input type="password" name="" id="pwd" class="form-control">
+			</div>
+		</form>
+	</div>
+	<!-- 内联表单 -->
+	<div class="container">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="email">email</label>
+				<input type="email" id="email" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="pwd" class="sr-only">pwd</label>
+				<input type="password" name="" id="pwd" class="form-control">
+			</div>
+		</form>
+	</div>
+
+	<div class="container">
+		<form  class="form-inline">
+			<div class="form-group">
+				<label for="email" class="sr-only">email</label>
+				<div class="input-group">
+					<div class="input-group-addon">$</div>
+					<input type="email" id="email" class="form-control">
+					<div class="input-group-addon">.00</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- 水平排列的表单 -->
+	<div class="container">
+		<form  class="form-horizontal">
+			<div class="form-group">
+				<label for="email" class="col-sm-2 control-label">email</label>
+				<div class="col-sm-10">
+					<input type="email" id="email" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="pwd" class="col-sm-2 control-label">password</label>
+				<div class="col-sm-10">
+					<input type="password" id="pwd" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label >
+							<input type="checkbox"  id=""> remember me
+						</label>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<textarea name="" class="form-control" cols="30" rows="3"></textarea>
+	</div>
+	<!-- 多选和单选 -->
+	<div class="container">
+		<div class="checkbox disabled">
+			<label >
+				<input type="checkbox" value="" disabled>
+				option one is this and that&mdash;be sure to include why it is great
+			</label>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="form-group has-success has-feedback">
+			<label for="email" class="control-label col-md-2">email</label>
+			<input type="email" class="form-control " id="email" aria-describedby="inputsuccess">
+			<span class="glyphicon glyphicon-ok form-control-feedback " aria-hidden="true"></span>
+			<span id="inputsuccess" class="sr-only">success</span>
+		</div>
+
+		<div class="form-group has-success has-feedback">
+			<label for="email" class="control-label">email</label>
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="email" class="form-control " id="email" aria-describedby="inputsuccess">
+				<span class="glyphicon glyphicon-ok form-control-feedback " aria-hidden="true"></span>
+				<span id="inputsuccess" class="sr-only">success</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<a href="#" class="btn btn-default">aaa</a>
+		<button type="button" class="btn btn-primary btn-block">primary</button>
+		<button type="button" class="btn btn-success">success</button>
+		<button type="button" class="btn btn-info">info</button>
+		<button type="button" class="btn btn-warning">warning</button>
+		<button type="button" class="btn btn-danger">danger</button>
+		<button type="button" class="btn btn-link">link</button>
+	</div>
+
+
+	<div class="container">
+		<img src="" alt="" class="img-rounded">
+		<img src="" alt="" class="img-circle">
+		<img src="" alt="" class="img-thumbnail">
+	</div>
+</body>
+</html>

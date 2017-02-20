@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/ng08.js"></script>
+</head>
+<body>
+	<div ng-controller="FirstController">
+		<h3>name={{name}}</h3>
+		<h3 ng-bind="name"></h3>
+		<h3>sex={{sex}}</h3>
+		<br>
+		<h3>{{age>12?"好大":"好小"}}</h3>
+		<h3>{{stu.id}},{{stu.name}}</h3>
+		<h3>{{hobbies[1]}}</h3>
+		<h3>{{"name="+name}}</h3>
+	</div>
+</body>
+</html>

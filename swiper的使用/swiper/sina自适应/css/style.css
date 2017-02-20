@@ -1,0 +1,127 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* 头部header */
+#header{
+	width: 100%;
+	height: 36px;
+	border-bottom:1px solid #ccc;
+	font:1em/36px Arial;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+
+#header #top-link{
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to right,red 0,green 50%,blue 100%);
+}
+
+#header .swiper-slide{
+	width: auto;
+	height: 33px;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+.header-active{
+	color:#0af;
+	border-bottom:2px solid #0af; 
+}
+
+/* 横幅banner */
+#banner{
+	width:100%;
+	height: 170px;
+	position: relative;
+	margin-top: 45px;
+	overflow: hidden;
+}
+
+#banner .swiper-slide{
+	position: relative;
+	text-align: center;
+}
+
+#banner img{
+	max-width: 100%;
+}
+
+#banner .title{
+	position: absolute;
+	left: 0;
+	right:0;
+	bottom: 0;
+	font-size: 1em;
+	font-weight: normal;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+}
+
+#banner .swiper-pagination{
+	position: absolute;
+	bottom: 10px;
+	right:20px;
+	width: auto;
+	text-align: right;
+}
+
+#banner .swiper-pagination-bullet{
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	background-color: #fff;
+	margin: 0 3px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+#banner .swiper-pagination-bullet-active{
+	background-color: #ff7300;
+}
+
+/* 选项卡tabs */
+#tabs{
+	width: 100%;
+	height: 40px;
+	margin-top: 20px;
+	border-top:2px solid #9ac7ed;
+}
+#tabs a{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 1em;
+	text-align: center;
+	color:#2a70be;
+}
+#tabs .active{
+	color:#ff7300;
+}
+
+#tabs-container .news-list{
+	padding:0 10px;
+}
+
+#tabs-container .news-list li{
+	height: 35px;
+	line-height: 35px;
+	font-size: 0.9em;
+	list-style:none;
+	overflow: hidden;
+	border-bottom: 1px solid #eceef0;
+}
+
+
+
+
+
+
+
+

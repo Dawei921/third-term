@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>栅格系统</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+      .col1{
+        background-color: red;
+      }
+      .col2{
+        background-color: yellow;
+      }
+      .col3{
+        background-color: blue;
+      }
+      .col4{
+        background-color: green;
+      }
+      hr{
+        border: 1px solid #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div.container>div.row>div.col${col$}*4 -->
+    <div class="container">
+      <!-- 默认都独占一行 -->
+      <div class="row">
+        <div class="col1">col1</div>
+        <div class="col2">col2</div>
+        <div class="col3">col3</div>
+        <div class="col4">col4</div>
+      </div>
+      <hr>
+      
+      <!-- 根据尺寸变化，当到达临界值时会自动适应，匹配相应尺寸的设置（实现响应式布局） -->
+      <div class="row">
+        <div class="col1 col-xs-3 col-sm-2 col-md-1 col-lg-3">col1</div>
+        <div class="col2 col-xs-3 col-sm-2 col-md-1 col-lg-3">col2</div>
+        <div class="col3 col-xs-3 col-sm-2 col-md-1 col-lg-3">col3</div>
+        <div class="col4 col-xs-3 col-sm-2 col-md-1 col-lg-3">col4</div>
+      </div>
+      <hr>
+      
+      <!-- 较大尺寸未设置时默认会继承较小尺寸 -->
+      <div class="row">
+        <div class="col1 col-xs-3">col1</div>
+        <div class="col2 col-xs-3">col2</div>
+        <div class="col3 col-xs-3">col3</div>
+        <div class="col4 col-xs-3">col4</div>
+      </div>
+      <hr>
+      
+      <!-- 较小尺寸未设置时默认会独占一行 -->
+      <div class="row">
+        <div class="col1 col-md-3">col1</div>
+        <div class="col2 col-md-3">col2</div>
+        <div class="col3 col-md-3">col3</div>
+        <div class="col4 col-md-3">col4</div>
+      </div>
+      <hr>
+      
+      <!-- 可以自定义每列所点网格数，可以不同 -->
+      <div class="row">
+        <div class="col1 col-md-1">col1</div>
+        <div class="col2 col-md-2">col2</div>
+        <div class="col3 col-md-4">col3</div>
+        <div class="col4 col-md-3">col4</div>
+      </div>
+      <hr>
+      
+      <!-- 总数不能超过12，超过时会另起一行显示 -->
+      <div class="row">
+        <div class="col1 col-md-3">col1</div>
+        <div class="col2 col-md-4">col2</div>
+        <div class="col3 col-md-4">col3</div>
+        <div class="col4 col-md-3">col4</div>
+      </div>
+      <hr>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col1 col-sm-3">col1</div>
+        <div class="col2 col-sm-3">col2</div>
+        <div class="col3 col-sm-3">col3</div>
+        <div class="col4 col-sm-3">col4</div>
+      </div>
+    </div>
+  </body>
+</html>

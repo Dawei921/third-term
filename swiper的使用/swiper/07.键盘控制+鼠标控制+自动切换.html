@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 500px;
+			height: 300px;
+			margin:20px auto;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第1页</div>
+			<div class="swiper-slide">第2页</div>
+			<div class="swiper-slide">第3页</div>
+			<div class="swiper-slide">第4页</div>
+			<div class="swiper-slide">第5页</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<!-- 添加左右控制按钮（箭头） -->
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			paginationClickable:true,
+			spaceBetween:20,
+			prevButton:".swiper-button-prev",
+			nextButton:".swiper-button-next",
+
+			keyboardControl:true, //键盘控制
+
+			mousewheelControl:true, //鼠标滚轮控制
+			// direction:"vertical",
+
+			autoplay:2000, //毫秒
+			// loop:true,
+			autoplayDisableOnInteraction:false,
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 使用XML存储图书信息 -->
+<BOOKS xmlns:itany="http://www.itany.com/development/project" xmlns:wbs="http://www.baidu.com" xmlns="http://sina.com">
+	<itany:book>
+		<itany:id>1001</itany:id>
+		<wbs:title>xml解析</wbs:title>
+		<publish>北京工业出版社</publish>
+		<价格>45.5</价格>
+	</itany:book>
+	<wbs:book>
+		<id>1002</id>
+		<publish>北京工业出版社</publish>
+		<title>xml解析</title>
+		<price>45.5</price>
+		<address>
+			<province></province>
+			<city></city>
+		</address>
+	</wbs:book>
+</BOOKS>

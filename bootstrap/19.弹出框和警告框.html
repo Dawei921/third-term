@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+    hr {
+        border: 1px solid #666;
+    }
+    </style> 
+</head>
+
+<body style="margin:50px;">
+
+<!-- 弹出框 -->
+    <button class="btn btn-info" id="btn" data-toggle="popover" title="<strong>itany</strong>" data-content="<span class='text-info small'>南京网博是专业的IT培训机构，welcome to itany...</span>"
+        data-animation="true" data-html="true" data-placement="top" data-trigger="hover" data-delay="500">
+        网博
+    </button>
+    
+    <button class="btn btn-primary" id="btn2">itany网博</button>
+    <br>
+    <br>         
+    
+    <button class="btn btn-default" id="btnShow">显示</button>
+    <button class="btn btn-default" id="btnHide">隐藏</button>
+    <button class="btn btn-default" id="btnToggle">切换</button>
+    <hr>
+
+
+
+
+
+
+<!-- 警告框 -->
+    <div class="alert alert-warning">
+        <!-- <button class="close" data-dismiss="alert"> -->
+        <button class="close" id="btnClose">
+            <span>&times;</span>
+        </button>
+        <p>警告，不允许此操作！</p>
+    </div>
+
+    
+
+    <script>
+    $('#btn').popover();
+
+    //使用JavaScript方式
+    $('#btn2').popover({
+        title:'<strong>welcome to itany</strong>',
+        content:'<span class="text-info small">南京网博是专业的IT培训机构，welcome to itany...</span>',
+        animation:true,
+        html:true,
+        placement:'right',
+        delay:0,
+    });
+
+    //方法
+    $('#btnShow').on('click',function () {
+        $('#btn').popover('show');
+    });
+    $('#btnHide').on('click',function () {
+        $('#btn').popover('hide');
+    });
+    $('#btnToggle').on('click',function () {
+        $('#btn').popover('toggle');
+    });
+
+    //事件
+    $('#btn').on({
+        'show.bs.popover':function () {
+            console.log('即将显示');
+        },
+        'hide.bs.popover':function(){
+            console.log('即将隐藏');
+        }
+    });
+
+    //警告框的关闭按钮
+    $('#btnClose').on('click',function () {
+        $(".alert").alert('close');
+    })
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

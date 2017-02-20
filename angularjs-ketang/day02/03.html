@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>03</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/ng03.js"></script>
+</head>
+<body>
+	<div ng-controller="FirstController">
+		<h3 ng-bind="name"></h3>
+		<button ng-click="show()">click me</button>
+		<div ng-controller="SecondController">
+		<h3 ng-bind="name"></h3>
+		<button ng-click="show()">clickme2</button>
+	</div>
+	</div>
+	<hr>
+	<div ng-controller="SecondController">
+		<h3 ng-bind="name"></h3>
+		<button ng-click="show()">clickme2</button>
+	</div>
+</body>
+</html>

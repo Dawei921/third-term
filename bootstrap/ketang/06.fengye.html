@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		hr{
+			border:1px solid orange;
+		}
+	</style>
+</head>
+<body>
+	<div class="contianer">
+		<ul class="breadcrumb">
+			<li><a href="#">home</a></li>
+			<li><a href="#">library</a></li>
+			<li><a href="#">data</a></li>
+			<li>xianshi</li>
+		</ul>
+		<hr>
+		<nav>
+			<ul class="pagination pagination-lg">
+				<li>
+					<a href="#" aria-label="previous">
+						<span>&laquo;</span>
+					</a>
+				</li>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>                 
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li class="disabled"><a href="#">5</a></li>
+				<li>
+					<a href="#" aria-label="next">
+						<span>&raquo;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<nav style="width:300px">
+			<ul class="pager">
+				<li class="previous"><a href="#">previous</a></li>
+				<li class="next"><a href="#">next</a></li>
+			</ul>
+		</nav>
+		<h3>woshicahoren <span class="label label-success">new</span></h3>
+		<button class="btn btn-primary">
+			messages <span class="badge">4</span>
+		</button>
+	</div>
+	<div class="jumbotron container">
+		<h1>HELLO,WORLD!</h1>
+		<P>One day,a bussinessman come to bazzi;He just wear a black shoes and very hungry</P>
+		<p><a href="#" class="btn btn-primary btn-lg">Know more</a></p>
+	</div>
+	<div class="progress container">
+		<div class="progress-bar progress-bar-striped active" role="progressbar" style="width:60%">
+			<span class="sr-only">45% Complete</span>
+		</div>
+	</div>
+	<div class="alert alert-warning alert-dismissible" >
+		<button class="close" data-dismiss="alert">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<strong>Warning!</strong>
+		Better check yourself
+	</div>
+	
+	
+	<!-- 模态框 -->
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">用户登陆</h4>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-6">name:</div>
+							<div class="col-xs-6">shuru name</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6">password:</div>
+							<div class="col-xs-6">shuru pwd</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary">登陆</button>
+					<button class="btn btn-primary">注册</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+	<br>
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" 
+	data-backdrop="static">弹出模态框</button>
+	<a class="btn btn-danger" href="#myModal" data-toggle="modal">使用a标签弹出模态框</a>
+	<button class="btn btn-info" id="btnOpen">使用js弹出模态框</button>
+
+	<script>
+	$("#btnOpen").on("click",function(){
+		// $("#myModal").modal()
+		$("#myModal").modal({
+			backdrop:true,
+			keyboard:true,
+			// show:false,
+		});
+
+	})
+	</script>
+
+</body>
+</html>

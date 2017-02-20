@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+    hr {
+        border: 1px solid #666;
+    }
+    </style> 
+</head>
+
+<body style="margin:50px;">
+    <!-- 基本实例 -->
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#content">
+        网博
+    </button>
+    <div id="content" class="collapse">
+        <div class="well">
+            网博是专业的IT培训机构。。。。
+            网博是专业的IT培训机构。。。。
+            网博是专业的IT培训机构。。。。
+            网博是专业的IT培训机构。。。。
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-success" id="btnOpen">打开折叠内容</button>
+    <hr>
+    
+    <!-- 手风琴折叠效果 -->
+    <div class="panel-group" id="itany">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <!-- 不用js的一种写法 如下屏蔽内容-->
+                <!-- <a href="#one" class="panel-title" data-toggle="collapse" data-parent="#itany">第一部分</a> -->
+                <a href="#one" class="panel-title">第一部分</a>
+            </div>
+            <div class="panel-collapse collapse" id="one">
+                <div class="panel-body">
+                    第一部分的内容。。。。。。
+                    第一部分的内容。。。。。。
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a href="#two" class="panel-title">第二部分</a>
+            </div>
+            <div class="panel-collapse collapse" id="two">
+                <div class="panel-body">
+                    第二部分的内容。。。。。。
+                    第二部分的内容。。。。。。
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a href="#three" class="panel-title">第三部分</a>
+            </div>
+            <div class="panel-collapse collapse" id="three">
+                <div class="panel-body">
+                    第三部分的内容。。。。。。
+                    第三部分的内容。。。。。。
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $('#btnOpen').on('click',function () {
+            $('#content').collapse('toggle');
+        });   
+
+
+
+        $('#itany .collapse').collapse({
+            toggle:false,
+            parent:'#itany',
+        }); 
+        $('#itany a').on('click',function () {
+            $(this).parent().siblings().collapse('toggle');
+        })    
+    </script>
+</body>
+
+</html>

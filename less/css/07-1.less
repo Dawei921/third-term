@@ -1,0 +1,25 @@
+.a{
+	font-size: 30px;
+	color:orange;
+}
+.b{
+	background: yellow;
+}
+
+#d1{
+	border: 1px solid orange;
+	font-size: 20px;
+	width: 300px;
+	&:extend(.a);
+	.c2{
+		font-size: 13px;
+		color:#ccc;
+		#p1{
+			// background: blue;
+			&:extend(.a,.b);
+		}
+		#p2{
+			background: red;
+		}
+	}
+}

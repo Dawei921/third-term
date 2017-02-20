@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.9.0.js"></script>
+    <!-- 引入模板引擎js -->
+    <!-- <script src="js/template.js"></script> -->
+    <script src="js/template-native.js"></script>
+    <!-- 定义模板，使用简洁语法，简单，可读性高，推荐 -->
+    <script id="itany" type="text/html">
+        <h2>班级名称：{{className}}</h2>
+        <ul>
+            {{each students as student i}}
+            	<li>序号：{{i+1}},学号：{{student.id}},姓名：{{student.name}}</li>
+            {{each}}
+        </ul>
+        {{if className=="y"}}
+        	<p>你是y班的</p>
+        {{else if className=="n"}}
+        	<p>你是n班的</p>
+        {{else}}
+        	<p>你是哪个班的？</p>
+        {{/if}}
+    </script>
+    <script>
+   var data={
+            className:"wbs16092",
+            students:[
+                {
+                    id:1001,
+                    name:"tom"
+                },
+                {
+                    id:1002,
+                    name:"mike"
+                },
+                {
+                    id:1003,
+                    name:"alice"
+                },
+                {
+                    id:1004,
+                    name:"jack"
+                },
+            ],
+        };
+
+        //渲染模板
+        $(function(){
+            var result=template("itany",data);
+            $("#info").html(result);
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="info"></div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.css">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 300px;
+			margin:20px auto;
+		}
+		.swiper-slide{
+			background-color: #ccc;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+		.append-buttons{
+			text-align: center;
+			margin-top:20px;
+		}
+		.append-buttons a{
+			display: inline-block;
+			border: 1px solid blue;
+			padding:4px 10px;
+			text-decoration: none;
+			border-radius: 4px;
+			font-size: 13px;
+			color:blue;
+			margin: 0 10px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">第1页</div>
+			<div class="swiper-slide">第2页</div>
+			<div class="swiper-slide">第3页</div>
+			<div class="swiper-slide">第4页</div>
+			<div class="swiper-slide">第5页</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+	</div>
+	<div class="append-buttons">
+		<a href="#" class="prepend">向前添加1个滑块</a>
+		<a href="#" class="prepend2">向前添加2个滑块</a>
+		<a href="#" class="append">向后添加1个滑块</a>
+		<a href="#" class="append2">向后添加2个滑块</a>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			paginationClickable:true,
+			spaceBetween:20,
+			prevButton:".swiper-button-prev",
+			nextButton:".swiper-button-next",
+
+		});
+
+		/*
+			HTML5中新增document.querySelector()和document.querySelectorAll()两个方法，用来更方便的获取DOM元素，功能上类似于jQuery中的选择器
+		*/
+		var prependNumber=0;
+		var appendNumber=6;
+		document.querySelector(".prepend").addEventListener("click", function(e){
+			e.preventDefault(); //阻止事件关联的默认行为
+			swiper.prependSlide("<div class='swiper-slide'>第"+(prependNumber--) +"页</div>"); 
+
+		});
+
+		document.querySelector(".prepend2").addEventListener("click", function(e){
+			e.preventDefault(); //阻止事件关联的默认行为
+			swiper.prependSlide([
+				"<div class='swiper-slide'>第"+(prependNumber--) +"页</div>",
+				"<div class='swiper-slide'>第"+(prependNumber--) +"页</div>",
+			]); 
+		});
+
+		document.querySelector(".append").addEventListener("click", function(e){
+			e.preventDefault(); //阻止事件关联的默认行为
+			swiper.appendSlide("<div class='swiper-slide'>第"+(appendNumber++) +"页</div>"); 
+		});
+
+		document.querySelector(".append2").addEventListener("click", function(e){
+			e.preventDefault(); //阻止事件关联的默认行为
+			swiper.appendSlide([
+				"<div class='swiper-slide'>第"+(appendNumber++) +"页</div>",
+				"<div class='swiper-slide'>第"+(appendNumber++) +"页</div>"
+			]); 
+
+		});
+	
+
+
+
+
+
+	</script>
+</body>
+</html>

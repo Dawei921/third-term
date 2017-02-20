@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/swiper.css">
+	<style>
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			background-color: #ccc;
+		}
+
+		.swiper-slide img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+			transform:translate(-50%,-50%);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/ad-01.jpg"> 
+			</div>
+			<div class="swiper-slide">
+				<img data-src="images/ad-02.jpg" class="swiper-lazy">
+				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+			</div>
+			<div class="swiper-slide">
+				<img data-src="images/ad-03.jpg" class="swiper-lazy">
+				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+			</div>
+			<div class="swiper-slide">
+				<img data-src="images/ad-04.jpg" class="swiper-lazy">
+				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+		<div class="swiper-button-next swiper-button-white"></div>
+	</div>
+
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper=new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			paginationClickable:true,
+			spaceBetween:20,
+			prevButton:".swiper-button-prev",
+			nextButton:".swiper-button-next",
+
+			/*
+				延迟加载：
+				1.启用延迟加载
+				2.将图像img标签的src改写为data-src，并且添加类名swiper-lazy
+			*/
+
+			preloadImages:false, //关闭预加载图像，默认为true
+			lazyLoading:true, //延迟加载
+
+		});
+	</script>
+</body>
+</html>
